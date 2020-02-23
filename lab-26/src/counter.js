@@ -34,13 +34,13 @@ class Counter extends React.Component{
     render (){
       return(
         <section>
-          <h3>
-           counter = {this.state.counter}
+          <h3 style={{ color: Math.sign(this.state.counter) >= 0 ? 'green' : 'orange' }}>
+            {this.state.counter}
           </h3>
-          <button onClick={this.increaseClicks}>
+          <button onClick={this.increaseClicks} id="one">
             click to increase counter
           </button>
-          <button onClick={this.decreaseClicks}>
+          <button onClick={this.decreaseClicks} id="two">
             click to decrease counter
           </button>
         </section>
